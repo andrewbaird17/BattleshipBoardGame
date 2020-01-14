@@ -6,12 +6,13 @@ using System.Threading.Tasks;
 
 namespace Battleship
 {
-    class Program
+    class Human
     {
-        static void Main(string[] args)
-        {
-            Game game = new Game();
-            game.RunGame();
-        }
+        //Member Variables (HAS A)
+
+        //Constructor
+
+        //Member Methods (CAN DO)
+
     }
 }
