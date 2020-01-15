@@ -13,7 +13,7 @@ namespace Battleship
         //Constructor
 
         //Member Methods (CAN DO)
-        public void GameStartUp()
+        public void PlayerStartUp()
         {
 
             GameInstructions();

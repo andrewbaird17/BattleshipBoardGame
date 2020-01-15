@@ -16,7 +16,6 @@ namespace Battleship
         //Member Methods (CAN DO)
 
         public abstract void SetName();
-
-        public abstract void ChooseAllegiance();
+        
     }
 }

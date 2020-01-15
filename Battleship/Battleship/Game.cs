@@ -9,18 +9,17 @@ namespace Battleship
     public class Game
     {
         //Member Variables (HAS A)
-        PlayerSetup setup;
-        GameSetup gamesetup;
+        public PlayerSetup playersetup = new PlayerSetup();
+        public GameSetup gamesetup = new GameSetup();
         //Constructor
         public Game()
         {
-            setup = new PlayerSetup();
-            gamesetup = new GameSetup();
+          
         }
         //Member Methods (CAN DO)
         public void RunGame()
         {
-            setup.GameStartUp();
+            playersetup.PlayerStartUp();
             gamesetup.RunGameSetup();
         }
 

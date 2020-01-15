@@ -26,7 +26,8 @@ namespace Battleship
             {
                 for (int j = 0; j < grid.grid.GetLength(1); j++)
                 {
-                    Console.Write("[ " + grid.grid[i, j] + "] ");
+                    //Console.Write("[ " + grid.grid[i, j] + "] ");
+                    grid.grid[i, j] = "[ ]";
                 }
                 Console.WriteLine(" \n");
             }

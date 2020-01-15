@@ -20,9 +20,9 @@ namespace Battleship
 
         public void RunGameSetup()
         {
-            GameMode();
+            ChooseGameMode();
         }
-        public void GameMode()
+        public void ChooseGameMode()
         {
             Console.WriteLine("Let's start by choosing a game mode!\n" +
                 "1) Basic [Players Take Turns attacking one another]\n" +
