@@ -15,9 +15,7 @@ namespace Battleship
         //Member Methods (CAN DO)
         public void RunGame()
         {
-            GameGrid grid = new GameGrid();
-            Console.WriteLine(grid);
-            Console.ReadLine();
+            
         }
     }
 }

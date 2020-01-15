@@ -14,7 +14,8 @@ namespace Battleship
         //Constructor
         public GameGrid()
         {
-            grid = new string[20,20];
+            // Mike said doing a 10 x 10 game board would be okay
+            grid = new string[10,10];
         }
         //Member Methods (CAN DO)
 
