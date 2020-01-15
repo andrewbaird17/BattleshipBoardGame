@@ -17,13 +17,15 @@ namespace Battleship
         {
 
             GameInstructions();
+            GameMode();
             SetNumPlayers();
+
         }
 
         public void GameInstructions()
         {
             Console.WriteLine("Welcome to this remake of the classic game of Battleship!\n" +
-                "In this game there are two players, each player is given 5 ships of varying size\n" +
+                "In this game there are two players (or more), each player is given 5 ships of varying size\n" +
                 "(Destroyer (space size: 2), Submarine (space size: 3), Battleship (space size: 4), and Aircraft Carrier (space size: 5)\n" +
                 "and a blank board to choose where to set these ships in 'The Ocean'.\n" +
                 "Ships can only be placed vertically and horizontally. Overlapping ships and diagonal placement WILL NOT BE TOLERATED!\n" +
@@ -42,7 +44,7 @@ namespace Battleship
         }
         public void SetNumPlayers()
         {
-            int setNumberOfPlayers = 0 ;
+            int setNumberOfPlayers = 0;
             // validate numofPlayers to a valid #player
             Console.Clear();
             Console.WriteLine("Choose number of players! Must be a number");
@@ -60,7 +62,6 @@ namespace Battleship
                 TypesofPlayers(setNumberOfPlayers);
             }
         }
-
         public void TypesofPlayers(int setNumberofPlayers)
         {
             players = new List<Player>();
@@ -79,20 +80,35 @@ namespace Battleship
                 case "1":
                     players.Add(new Human());
                     players[i].SetName();
-
                     break;
                 case "computer":
                 case "2":
                     players.Add(new Computer());
-                    players[i].userName = "Player" + string.Concat(i);
-                    Console.WriteLine(players[i].userName);
-                    Console.ReadLine();
+                    players[i].userName = "Player" + string.Concat(i + 1);
                     break;
                 default:
-                    Console.WriteLine("Player " + (i + 1) + "This is not a valid choice. Please Try Again./n" +
+                    Console.WriteLine("Player " + (i + 1) + " This is not a valid choice. Please Try Again.\n" +
                         "What kind of player are you?\n 1) Human or 2) Computer");
                     playerClass = Console.ReadLine().ToLower();
                     PlayerNameSet(playerClass, i);
+                    break;
+            }
+        }
+        public void GameMode()
+        {
+            Console.WriteLine("Let's start by choosing a game mode!\n" +
+                "1) Basic [Players Take Turns attacking one another]\n" +
+                "2) Salvo [Players Start with 5 Shots per turn and lose a shot for every ship that is sunk]\n" +
+                "3) Speed [Players get to go again if their shot is a HIT, otherwise play advances to next player]");
+            switch (Console.ReadLine())
+            {
+                case "1":
+                    break;
+                case "2":
+                    break;
+                case "3":
+                    break;
+                default:
                     break;
             }
         }

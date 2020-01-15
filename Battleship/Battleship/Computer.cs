@@ -11,11 +11,14 @@ namespace Battleship
         //Member Variables (HAS A)
 
         //Constructor
-
+        public Computer()
+        {
+            
+        }
         //Member Methods (CAN DO)
         public override void SetName()
         {
-
+         
         }
     }
 }

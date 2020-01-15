@@ -10,11 +10,13 @@ namespace Battleship
     {
         //Member Variables (HAS A)
         public string userName;
-
+        
         //Constructor
 
         //Member Methods (CAN DO)
 
         public abstract void SetName();
+
+        public abstract void ChooseAllegiance();
     }
 }
