@@ -50,7 +50,7 @@ namespace Battleship
             Int32.TryParse(numOfPlayers, out setNumberOfPlayers);
             if (setNumberOfPlayers < 2)
             {
-                Console.WriteLine("Please try again. 1 player is not a valid option.");
+                Console.WriteLine("Please try again. Your input is not a valid option.");
                 Console.ReadLine();
                 SetNumPlayers();
             }
@@ -68,25 +68,32 @@ namespace Battleship
             {
                 Console.WriteLine("Player " + (i + 1) + ": What kind of player are you?\n 1) Human or 2) Computer");
                 string playerClass = Console.ReadLine().ToLower();
-                switch (playerClass)
-                {
-                    case "human":
-                    case "1":
-                        players.Add(new Human());
-                        players[i].SetName();
+                PlayerNameSet(playerClass, i);
+            }
+        }
+        public void PlayerNameSet(string playerClass, int i)
+        {
+            switch (playerClass)
+            {
+                case "human":
+                case "1":
+                    players.Add(new Human());
+                    players[i].SetName();
 
-                        break;
-                    case "computer":
-                    case "2":
-                        players.Add(new Computer());
-                        players[i].userName = "Player" + string.Concat(i);
-                        Console.WriteLine(players[i].userName);
-                        Console.ReadLine();
-                        break;
-                    default:
-
-                        break;
-                }
+                    break;
+                case "computer":
+                case "2":
+                    players.Add(new Computer());
+                    players[i].userName = "Player" + string.Concat(i);
+                    Console.WriteLine(players[i].userName);
+                    Console.ReadLine();
+                    break;
+                default:
+                    Console.WriteLine("Player " + (i + 1) + "This is not a valid choice. Please Try Again./n" +
+                        "What kind of player are you?\n 1) Human or 2) Computer");
+                    playerClass = Console.ReadLine().ToLower();
+                    PlayerNameSet(playerClass, i);
+                    break;
             }
         }
     }
