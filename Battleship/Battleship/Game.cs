@@ -9,9 +9,7 @@ namespace Battleship
     class Game
     {
         //Member Variables (HAS A)
-        //Player player1;
-        //Player player2;
-
+        List<Player> players;
         //Constructor
 
         //Member Methods (CAN DO)
@@ -52,7 +50,6 @@ namespace Battleship
         {
             int setNumberOfPlayers = 0;
             bool success = false;
-
             // validate numofPlayers to a valid #player
             do
             {
@@ -74,8 +71,23 @@ namespace Battleship
         }
         public void TypesofPlayers(int setNumberofPlayers)
         {
-            Console.WriteLine(setNumberofPlayers);
-            Console.ReadLine();
+            //Console.WriteLine(setNumberofPlayers);
+            //Console.ReadLine();
+            players = new List<Player>();
+            for (int i = 1; i <= setNumberofPlayers; i++)
+            {
+                Console.WriteLine("Player " + i + ": What kind of player are you? Human or Computer");
+                string playerClass = Console.ReadLine().ToLower();
+                if (playerClass == "human")
+                {
+                    players.Add();
+                }
+                else if (playerClass == "computer")
+                {
+                    players.Add();
+                }
+
+            }
         }
     }
 }
