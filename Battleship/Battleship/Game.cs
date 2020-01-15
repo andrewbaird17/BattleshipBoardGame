@@ -15,7 +15,24 @@ namespace Battleship
         //Member Methods (CAN DO)
         public void RunGame()
         {
-            
+            WelcomeMessage();
+            GameInstructions();
+            SetGameMode();
+        }
+
+        public void WelcomeMessage()
+        {
+
+        }
+
+        public void GameInstructions()
+        {
+
+        }
+
+        public void SetGameMode()
+        {
+
         }
     }
 }
