@@ -42,31 +42,27 @@ namespace Battleship
         }
         public void SetNumPlayers()
         {
-            int setNumberOfPlayers = 0;
-            bool success = false;
+            int setNumberOfPlayers = 0 ;
             // validate numofPlayers to a valid #player
-            do
+            Console.Clear();
+            Console.WriteLine("Choose number of players! Must be a number");
+            string numOfPlayers = Console.ReadLine();
+            Int32.TryParse(numOfPlayers, out setNumberOfPlayers);
+            if (setNumberOfPlayers < 2)
+            {
+                Console.WriteLine("Please try again. 1 player is not a valid option.");
+                Console.ReadLine();
+                SetNumPlayers();
+            }
+            else
             {
                 Console.Clear();
-                Console.WriteLine("Choose number of players! Must be a number");
-                string numOfPlayers = Console.ReadLine();
-                if (numOfPlayers == "1")
-                {
-                    Console.WriteLine("Please try again. 1 player is not a valid option.");
-                }
-                else
-                {
-                    success = Int32.TryParse(numOfPlayers, out setNumberOfPlayers);
-                }
-
-            } while (success == false);
-            Console.Clear();
-            TypesofPlayers(setNumberOfPlayers);
+                TypesofPlayers(setNumberOfPlayers);
+            }
         }
+
         public void TypesofPlayers(int setNumberofPlayers)
         {
-            //Console.WriteLine(setNumberofPlayers);
-            //Console.ReadLine();
             players = new List<Player>();
             for (int i = 0; i < setNumberofPlayers; i++)
             {

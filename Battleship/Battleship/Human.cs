@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Battleship
 {
-    class Human : Player
+    public class Human : Player
     {
         //Member Variables (HAS A)
 

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Battleship
 {
-    class Computer : Player
+    public class Computer : Player
     {
         //Member Variables (HAS A)
 
@@ -15,7 +15,7 @@ namespace Battleship
         //Member Methods (CAN DO)
         public override void SetName()
         {
-           
+
         }
     }
 }
