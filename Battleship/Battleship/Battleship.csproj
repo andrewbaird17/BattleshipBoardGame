@@ -45,7 +45,7 @@
   <ItemGroup>
     <Compile Include="Computer.cs" />
     <Compile Include="Game.cs" />
-    <Compile Include="GameSetup.cs" />
+    <Compile Include="PlayerSetup.cs" />
     <Compile Include="GameGrid.cs" />
     <Compile Include="Human.cs" />
     <Compile Include="Player.cs" />
