@@ -11,8 +11,15 @@ namespace Battleship
         //Member Variables (HAS A)
 
         //Constructor
+        public Human()
+        {
 
+        }
         //Member Methods (CAN DO)
-
+        public override void SetName()
+        {
+            Console.WriteLine("Please enter your player name");
+            userName = Console.ReadLine();
+        }
     }
 }

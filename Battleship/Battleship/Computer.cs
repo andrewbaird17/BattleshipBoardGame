@@ -13,6 +13,9 @@ namespace Battleship
         //Constructor
 
         //Member Methods (CAN DO)
-
+        public override void SetName()
+        {
+           
+        }
     }
 }
