@@ -9,7 +9,7 @@ namespace Battleship
     class Game
     {
         //Member Variables (HAS A)
-
+        
         //Constructor
 
         //Member Methods (CAN DO)

@@ -10,7 +10,7 @@ namespace Battleship
     {
         //Member Variables (HAS A)
 
-        string [,] grid;
+        public string[,] grid;
         //Constructor
         public GameGrid()
         {
