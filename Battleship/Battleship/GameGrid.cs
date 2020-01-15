@@ -15,6 +15,7 @@ namespace Battleship
         public GameGrid()
         {
             // Mike said doing a 10 x 10 game board would be okay
+            // arrays read as [row,column]
             grid = new string[10,10];
         }
         //Member Methods (CAN DO)
